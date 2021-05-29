@@ -18,4 +18,4 @@ jobs:
       - name: Build
         run: |
           cd xmlsec
-          xcodebuild | xcpretty
+          xcodebuild -project xmlsec.xcodeproj | xcpretty && exit ${PIPESTATUS[0]}
